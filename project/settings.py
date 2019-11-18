@@ -11,6 +11,8 @@ ENV = dotenv_values()
 
 DEBUG = is_true(ENV.get('DEBUG', 'False'))
 
+SECRET_KEY = ENV['SECRET_KEY']
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -24,8 +26,6 @@ DATABASES = {
 }
 
 INSTALLED_APPS = ['datacenter']
-
-SECRET_KEY = 'REPLACE_ME'
 
 ROOT_URLCONF = "project.urls"
 
